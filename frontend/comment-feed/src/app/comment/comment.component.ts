@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedComment } from 'src/models/comment';
 import { CommentService } from '../comment.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { CommentService } from '../comment.service';
   styleUrls: ['./comment.component.css'],
 })
 export class CommentComponent implements OnInit {
-  comments: string[] = [];
+  comments: FeedComment[] = [];
   constructor(public commentService: CommentService) {
     this.comments = commentService.getComments();
   }

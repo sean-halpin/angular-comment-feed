@@ -1,0 +1,9 @@
+<p>comment-edit works!</p>
+
+<h2>{{comment?.author}} Details</h2>
+<div><span>id: </span>{{comment?.id}}</div>
+<div>
+  <label for="comment-text">Comment: </label>
+  <input id="comment-text" [(ngModel)]="comment!.text" placeholder="Comment !"/>
+</div>
+<button (click)="save()">save</button>
